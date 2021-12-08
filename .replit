@@ -1,2 +1,2 @@
-language = "undefined"
-run = ""
+language = "bash"
+run = "git init && git add . && git commit -m 'repl.it' && git push origin master"
