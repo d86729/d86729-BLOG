@@ -1,2 +1,2 @@
 language = "bash"
-run = "git push && git init && git add . && git commit -m 'repl.it' && git push origin master"
+run = "git init && git add . && git commit -m 'repl.it' && git push origin master"
