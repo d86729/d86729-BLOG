@@ -1,11 +1,23 @@
+N = list(input())
+T = {}
 
-import sys
-lines = sys.stdin.readlines()
+dial = 2
+cnt = 0
 
-arr = []
-for line in lines:
-  arr.append(int(line))
+for i in range(ord('Z') - ord('A')+1):
+    if dial == 7 or dial == 9:
+        Thr = 4
+    else:
+        Thr = 3
+        
+    if cnt == Thr:
+        cnt = 0
+        dial += 1
+        
+    T[chr(i+65)] =  dial+1
+    cnt += 1
 
-k = max(arr)
-print(k)
-print(arr.index(k)+1)
+sum = 0
+for idx in N:
+    sum += T[idx]
+print(sum)
